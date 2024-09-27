@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: CloudFormation template for EventBridge Rulelog
+Description: CloudFormation template for EventBridge Rule
 Resources:
   MYRulefromCFT:
     Type: AWS::Events::Rule
