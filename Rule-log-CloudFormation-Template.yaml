@@ -4,13 +4,14 @@ Resources:
   MYRulefromCFT2:
     Type: AWS::Events::Rule
     Properties:
+      Name: MytestRule
       EventPattern: >-
         {"source":["aws.ec2"],"detail-type":["EC2 Instance State-change
         Notification"],"detail":{"state":["running"]}}
       State: ENABLED
       EventBusName: default
       Targets:
-        - Id: TestTarget
+        - Id: TestTarget1
           Arn:
             Fn::Sub: >-
               arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/events/custom_eblogs
