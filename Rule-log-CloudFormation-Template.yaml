@@ -4,7 +4,6 @@ Resources:
   MYRulefromCFT:
     Type: AWS::Events::Rule
     Properties:
-      Name: log
       EventPattern: >-
         {"source":["aws.ec2"],"detail-type":["EC2 Instance State-change
         Notification"],"detail":{"state":["running"]}}
