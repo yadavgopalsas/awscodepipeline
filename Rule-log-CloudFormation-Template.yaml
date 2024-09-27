@@ -5,6 +5,7 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       Name: MytestRule2
+      Description: CloudFormation template for EventBridge Rule.
       EventPattern: >-
         {"source":["aws.ec2"],"detail-type":["EC2 Instance State-change
         Notification"],"detail":{"state":["running"]}}
